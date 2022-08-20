@@ -11,24 +11,25 @@ export default {
   mounted() {
     this.cookies = Cookies.get(`selection`);
     if (this.cookies === `dog`) {
-      axios
+      this.image_request();
+
+    }
+  },
+  methods: {
+    image_request() {
+    axios
         .request({
           url: `https://dog.ceo/api/breeds/image/random`,
         })
         .then((response) => {
           this.image_url = response[`data`][`message`];
                 this.$root.$emit(`new_display`, this.image_url);
+                  Cookies.set(`selection`, `dog`);
         })
         .catch((error) => {
           error;
         });
 
-    }
-  },
-  methods: {
-    image_request() {
-      Cookies.set(`selection`, `dog`);
-      window.location.reload();
     },
   },
   data() {
