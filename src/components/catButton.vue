@@ -28,6 +28,8 @@ export default {
   methods: {
     image_request() {
       Cookies.set(`selection`, `cat`);
+            window.location.reload();
+
     },
   },
   data() {

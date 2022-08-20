@@ -28,6 +28,7 @@ export default {
   methods: {
     image_request() {
       Cookies.set(`selection`, `dog`);
+      window.location.reload();
     },
   },
   data() {
