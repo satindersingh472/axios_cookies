@@ -26,5 +26,7 @@
 img{
     height: 400px;
     width: 400px;
+    border-radius: 50%;
+    padding: 20px;
 }
 </style>

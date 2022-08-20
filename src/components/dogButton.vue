@@ -40,4 +40,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>  
+button{
+    padding: 10px;
+}
+</style>
