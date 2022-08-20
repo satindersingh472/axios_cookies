@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div v-if="images !== undefined">
 <img :src="images"/>
     </div>
 </template>

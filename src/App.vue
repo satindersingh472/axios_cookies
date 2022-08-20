@@ -1,8 +1,12 @@
 <template>
   <div id="app">
-    <display-selection></display-selection>
+    <div>
     <dog-button></dog-button>
     <cat-button></cat-button>
+    </div>
+    <div>
+    <display-selection></display-selection>
+    </div>
   </div>
 </template>
 
@@ -24,6 +28,8 @@ export default {
 #app{
   text-align: center;
   display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
+  justify-items: start;
 }
 </style>
